@@ -1,6 +1,27 @@
 // const axios = require('axios');
 const inquirer = require('inquirer');
-// const fs = require('fs');
+const fs = require('fs');
+
+const generateMarkdown = readMeData => {
+  return `
+  # ${readMeData.username}
+
+  ## Info
+  Email: [${readMeData.email}](mailto:${readMeData.email})
+
+  ## Description
+  ${readMeData.description}
+
+  ## Installation
+  ${readMeData.installation}
+
+  ## Usage
+  ${readMeData.usage}
+
+  ## License
+  ${readMeData.license}
+  `;
+};
 
 inquirer
   .prompt([{
@@ -32,5 +53,15 @@ inquirer
     message: 'What licenses did you use?',
     choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT', 'ISC'],
     type: 'list',
-    name: 'licenses'
-  }])
+    name: 'license'
+  }]).then(responseObj => {
+    console.log(responseObj);
+    const finishedMarkdown = generateMarkdown(responseObj);
+
+    fs.writeFile('./readme.md', finishedMarkdown, err => {
+      if (err) {
+        return console.log(err);
+      }
+      console.log('Success!');
+    });
+      });
