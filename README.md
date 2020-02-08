@@ -1,17 +1,19 @@
 
-  # Riaconianni
+  # riaconianni
+  
+  ![Avatar for Github User](https://avatars0.githubusercontent.com/u/56054058?v=4)
 
   ## Info
-  Email: [sodjfsodfj](mailto:sodjfsodfj)
+  Email: [iaconiannir@gmail.com](mailto:iaconiannir@gmail.com)
 
   ## Description
-  sodjfosjdf
+  sdifjsoidjf
 
   ## Installation
-  sdfnsoidnf
+  sdfnsidjfoi
 
   ## Usage
-  sdnffiosndf
+  djfisjdfijs
 
   ## License
   ISC
