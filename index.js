@@ -4,12 +4,7 @@ const fs = require("fs");
 
 const generateMarkdown = readMeData => {
   return `
-  # ${readMeData.username}
-  
-  ![Avatar for Github User](${readMeData.avatar_url})
-
-  ## Info
-  Email: [${readMeData.email}](mailto:${readMeData.email})
+  # ${readMeData.title}
 
   ## Description
   ${readMeData.description}
@@ -20,13 +15,29 @@ const generateMarkdown = readMeData => {
   ## Usage
   ${readMeData.usage}
 
+  ## Credits
+ ### ${readMeData.username}
+
+  Email: [${readMeData.email}](mailto:${readMeData.email})
+  ![Avatar for Github User](${readMeData.avatar_url})
+
   ## License
   ${readMeData.license}
+
+  ## Badges
+  ![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)
+
+  ![made-with-node.js](https://img.shields.io/badge/Made%20with-Node.js-brightgreen)
   `;
 };
 
 inquirer
   .prompt([
+    {
+      type: "input",
+      message: "What is your project title?",
+      name: "title"
+    },
     {
       type: "input",
       message: "What is your github username?",
