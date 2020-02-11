@@ -2,13 +2,13 @@
   # Readme Generator
 
   ## Description
-  isjdfisjdifj
+  This is a readme generator created using node.js, axios, inquirer, and fs.
 
   ## Installation
-  sdjfisdjf
+  The user will need to clone the repo from github and open it in VS Code.
 
   ## Usage
-  sidjfisdjf
+  The user will need to open up the terminal in VS code, run node index.js, answer all the prompts, and a readme markdown file will be created.
 
   ## Credits
  ### Riaconianni
