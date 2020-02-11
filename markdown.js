@@ -15,6 +15,7 @@ const generateMarkdown = readMeData => {
  ### ${readMeData.username}
 
   Email: [${readMeData.email}](mailto:${readMeData.email})
+  
   ![Avatar for Github User](${readMeData.avatar_url})
 
   ## License
